@@ -18,10 +18,10 @@ const options =  {
 
 mongoose.connect(mongoURI, options)
 .then(function(){
-  console.log('connected successfully');
+  console.log('Connected to Mongoose successfully!');
 }, function(err) {
   //err handle
-  console.log('connection failed');
+  console.log('Unable to connect to the Mongoose server. Please start the server. Error:', err);
 });
 
 /* GET api listing. */
