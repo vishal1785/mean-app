@@ -17,6 +17,6 @@ export class ShoppingEditComponent implements OnInit {
   }
 
   onAddIng(nameInput: HTMLInputElement, amtInput: HTMLInputElement) {
-    this.shoppingListService.ingredientAdded.emit(new Ingredient( nameInput.value, Number(amtInput.value)));
+    this.shoppingListService.ingredientAdded.next(new Ingredient( nameInput.value, Number(amtInput.value)));
   }
 }
