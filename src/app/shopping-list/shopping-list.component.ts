@@ -19,10 +19,14 @@ export class ShoppingListComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.ingredients = this.shoppingListService.getIngredients();
     this.subscription = this.shoppingListService.ingredientAdded.subscribe(
-      (ingItem: Ingredient) => {
-        this.ingredients.push(ingItem);
+      (ingItems: Ingredient[]) => {
+        this.ingredients = ingItems;
       }
     );
+  }
+
+  onItemSelect(index: number){
+      this.shoppingListService.startedEditing.next(index);
   }
 
   ngOnDestroy(){

@@ -10,7 +10,7 @@ export class RecipeService {
 
     private recipes : Recipe[] = [
         new Recipe("Ratatoiulle","A mouse chef favourite dish",
-        "https://store.hmv.com/HMVStore/media/product/760936/01-760936.jpg", 
+        "https://www.traegergrills.com/on/demandware.static/-/Library-Sites-TraegerSharedLibrary/default/dw2e9a03f1/images/recipes/20170803_Smoked-Ratatouille_RE_HE_M.jpg", 
         [
             new Ingredient('Capsicum',10),
             new Ingredient('Brocolli',15)
