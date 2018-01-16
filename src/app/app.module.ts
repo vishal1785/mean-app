@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
@@ -18,6 +18,7 @@ import { ShoppingListService } from 'app/shopping-list/shopping-list.service';
 import { AppRoutingModule } from 'app/app-routing.module';
 import { RecipeStartComponent } from 'app/recipes/recipe-start/recipe-start.component';
 import { RecipeEditComponent } from 'app/recipes/recipe-edit/recipe-edit.component';
+import { RecipeService } from 'app/recipes/recipes.service';
 
 
 // Define the routes
@@ -52,10 +53,11 @@ import { RecipeEditComponent } from 'app/recipes/recipe-edit/recipe-edit.compone
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpModule,
     AppRoutingModule
   ],
-  providers: [PostsService,ShoppingListService],
+  providers: [PostsService,ShoppingListService,RecipeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
