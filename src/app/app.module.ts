@@ -4,8 +4,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { PostsComponent } from './posts/posts.component';
-import { PostsService } from './posts.service';
 import { HeaderComponent } from './header/header.component';
 import { RecipesComponent } from './recipes/recipes.component';
 import { RecipeListComponent } from './recipes/recipe-list/recipe-list.component';
@@ -22,24 +20,9 @@ import { RecipeService } from 'app/recipes/recipes.service';
 import { DataStorageService } from 'app/shared/datastorage.service';
 
 
-// Define the routes
-/*const ROUTES = [
-  {
-    path: '',
-    redirectTo: 'posts',
-    pathMatch: 'full'
-  },
-  {
-    path: 'posts',
-    component: PostsComponent
-  }
-];
-*/
-
 @NgModule({
   declarations: [
     AppComponent,
-    //PostsComponent,
     HeaderComponent,
     RecipesComponent,
     RecipeListComponent,
@@ -58,7 +41,7 @@ import { DataStorageService } from 'app/shared/datastorage.service';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [PostsService,ShoppingListService,RecipeService,DataStorageService],
+  providers: [ShoppingListService,RecipeService,DataStorageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
