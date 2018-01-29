@@ -19,6 +19,7 @@ import { AppRoutingModule } from 'app/app-routing.module';
 import { RecipeStartComponent } from 'app/recipes/recipe-start/recipe-start.component';
 import { RecipeEditComponent } from 'app/recipes/recipe-edit/recipe-edit.component';
 import { RecipeService } from 'app/recipes/recipes.service';
+import { DataStorageService } from 'app/shared/datastorage.service';
 
 
 // Define the routes
@@ -57,7 +58,7 @@ import { RecipeService } from 'app/recipes/recipes.service';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [PostsService,ShoppingListService,RecipeService],
+  providers: [PostsService,ShoppingListService,RecipeService,DataStorageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

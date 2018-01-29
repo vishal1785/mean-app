@@ -10,7 +10,7 @@ export class RecipeService {
     recipesChanged = new Subject<Recipe[]>();
 
     private recipes : Recipe[] = [
-        new Recipe("Ratatoiulle","A mouse chef favourite dish",
+       /* new Recipe("Ratatoiulle","A mouse chef favourite dish",
         "https://www.traegergrills.com/on/demandware.static/-/Library-Sites-TraegerSharedLibrary/default/dw2e9a03f1/images/recipes/20170803_Smoked-Ratatouille_RE_HE_M.jpg", 
         [
             new Ingredient('Capsicum',10),
@@ -21,13 +21,18 @@ export class RecipeService {
         [
             new Ingredient('Red Meat',5),
             new Ingredient('French Fries',20)
-        ])
+        ])*/
     ];
     
     constructor(private shopListService : ShoppingListService){}
 
     getRecipes(){
         return this.recipes.slice();
+    }
+
+    setRecipes(recipes: Recipe[]){
+        this.recipes = recipes;
+        this.recipesChanged.next(this.recipes.slice());
     }
 
     getRecipeById(index: number){
